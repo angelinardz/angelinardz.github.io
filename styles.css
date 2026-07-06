@@ -463,6 +463,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
   transform-style: preserve-3d;
   will-change: transform;
   position: relative;
+  cursor: pointer;
 }
 .project-card:hover {
   text-decoration: none;
@@ -486,6 +487,16 @@ main, .nav, .footer { position: relative; z-index: 2; }
   align-items: center;
 }
 .project-card__links .gh-stat { display: inline-flex; gap: 0.3rem; align-items: center; }
+.project-card__links a { color: var(--gray-500); transition: color 0.2s; }
+.project-card__links a:hover { color: var(--accent); text-decoration: none; }
+.project-card__demo {
+  color: var(--accent) !important;
+  border: 1px solid rgba(91, 140, 255, 0.35);
+  border-radius: 99px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.72rem;
+}
+.project-card__demo:hover { background: var(--accent-soft); }
 
 .project-card h3 {
   color: var(--white);
