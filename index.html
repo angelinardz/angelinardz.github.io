@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angelina Rodriguez — Computer Science @ UT Austin</title>
+  <meta name="description" content="Portfolio of Angelina Rodriguez, Computer Science student at The University of Texas at Austin. Builder of web apps and ML tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top">
+      <span class="nav__prompt">~/</span>angelina<span class="nav__cursor">_</span>
+    </a>
+    <nav class="nav__links" aria-label="Main navigation">
+      <a href="#about"><span class="nav__num">01.</span> about</a>
+      <a href="#experience"><span class="nav__num">02.</span> experience</a>
+      <a href="#projects"><span class="nav__num">03.</span> projects</a>
+      <a href="#contact"><span class="nav__num">04.</span> contact</a>
+      <a class="nav__resume" href="https://github.com/angelinardz" target="_blank" rel="noopener">github ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__terminal reveal">
+        <div class="terminal__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="terminal__title">angelina@utexas: ~/portfolio</span>
+        </div>
+        <div class="terminal__body">
+          <p class="terminal__line"><span class="t-prompt">$</span> whoami</p>
+          <h1 class="hero__name">Angelina Rodriguez</h1>
+          <p class="terminal__line"><span class="t-prompt">$</span> cat role.txt</p>
+          <p class="hero__role"><span id="typewriter"></span><span class="type-caret">▌</span></p>
+          <p class="terminal__line terminal__line--dim"><span class="t-prompt">$</span> ./run --location "Austin, TX" --status "open to internships"</p>
+        </div>
+      </div>
+
+      <p class="hero__tagline reveal">
+        I build things and think about <em>why they matter</em> — web apps, ML tools,
+        and products designed with both engineering and product thinking.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary magnetic" href="#projects">View my work</a>
+        <a class="btn btn--ghost magnetic" href="mailto:angelinardz06@gmail.com">Get in touch</a>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to about section">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <h2 class="section__title reveal"><span class="section__num">01.</span> About</h2>
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            I'm a Computer Science student at <strong>The University of Texas at Austin</strong>
+            (B.S. expected May 2029), a first-generation college student, and a
+            <strong>Dell Scholar</strong> in the UT For Me program.
+          </p>
+          <p>
+            I've built ML-powered tools that summarize and analyze news sentiment, privacy-first
+            web experiences, and data dashboards exploring mental health in the tech industry.
+            I care about the intersection of engineering and product — not just <em>how</em>
+            something is built, but <em>who</em> it's for.
+          </p>
+          <p>
+            Bilingual in English and Spanish, I've also mentored high school students in
+            UT's CS Academies — because the best way to learn is to help someone else start.
+          </p>
+        </div>
+        <div class="about__panel reveal">
+          <div class="code-card">
+            <div class="code-card__header">skills.py</div>
+            <pre class="code-card__body"><code><span class="c-kw">class</span> <span class="c-cls">Angelina</span>:
+    languages  = [<span class="c-str">"Python"</span>, <span class="c-str">"Java"</span>, <span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>]
+    tools      = [<span class="c-str">"Git"</span>, <span class="c-str">"GitHub"</span>, <span class="c-str">"VS Code"</span>, <span class="c-str">"Linux"</span>]
+    libraries  = [<span class="c-str">"Flask"</span>, <span class="c-str">"TextBlob"</span>, <span class="c-str">"Newspaper3k"</span>]
+    pm_data    = [<span class="c-str">"Tableau"</span>, <span class="c-str">"SQL"</span>]
+    spoken     = [<span class="c-str">"English"</span>, <span class="c-str">"Español"</span>]
+
+    <span class="c-kw">def</span> <span class="c-fn">mission</span>(self):
+        <span class="c-kw">return</span> <span class="c-str">"build things that matter"</span></code></pre>
+          </div>
+          <div class="edu-card">
+            <span class="edu-card__icon">🎓</span>
+            <div>
+              <strong>UT Austin — B.S. Computer Science</strong>
+              <span>Data Structures · Discrete Math · Programming</span>
+              <span class="edu-card__badge">UT For Me — Dell Scholars Program</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <h2 class="section__title reveal"><span class="section__num">02.</span> Experience</h2>
+      <div class="timeline">
+        <article class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">Jun – Jul 2026</span>
+            <h3>Residential Advisor <span class="timeline__org">· UT CS Academies</span></h3>
+            <ul>
+              <li>Mentored and supervised 10 high school students in a residential CS summer program, supporting academic growth and community building in a technical environment.</li>
+              <li>Acted as a key stakeholder interface between participants and administration, identifying and escalating student concerns to program leadership.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">Jun 2025</span>
+            <h3>Data Science Scholar <span class="timeline__org">· Kode With Klossy</span></h3>
+            <ul>
+              <li>Collaborated with a team to analyze a real-world mental health dataset and built an interactive Tableau dashboard exploring mental health trends across the tech industry — workplace disclosure, help-seeking behavior, and employer attitudes.</li>
+            </ul>
+            <div class="timeline__tags"><span>Tableau</span><span>Data Analysis</span><span>Teamwork</span></div>
+          </div>
+        </article>
+        <article class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">Jul 2024</span>
+            <h3>Machine Learning Certification <span class="timeline__org">· Girls Who Code</span></h3>
+            <ul>
+              <li>Applied SQL and Python to clean and analyze real-world datasets; built ML models and data visualizations as part of a structured AI curriculum.</li>
+            </ul>
+            <div class="timeline__tags"><span>Python</span><span>SQL</span><span>Machine Learning</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <h2 class="section__title reveal"><span class="section__num">03.</span> Projects</h2>
+      <p class="section__sub reveal">
+        <span class="live-dot"></span> Live from <a href="https://github.com/angelinardz" target="_blank" rel="noopener">github.com/angelinardz</a> — stats update automatically.
+      </p>
+      <div class="projects" id="projects-grid">
+        <!-- Cards rendered by script.js; static fallback below -->
+        <noscript>
+          <p>Enable JavaScript to see live GitHub project data, or visit
+            <a href="https://github.com/angelinardz">github.com/angelinardz</a>.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <h2 class="section__title reveal"><span class="section__num">04.</span> Contact</h2>
+      <div class="contact reveal">
+        <p class="contact__big">Let's build something<br /><span class="contact__accent">that matters.</span></p>
+        <p class="contact__sub">I'm open to internships, research, and collaboration. My inbox is always open.</p>
+        <a class="btn btn--primary btn--lg magnetic" href="mailto:angelinardz06@gmail.com">angelinardz06@gmail.com</a>
+        <div class="contact__links">
+          <a href="https://github.com/angelinardz" target="_blank" rel="noopener">GitHub</a>
+          <span>/</span>
+          <a href="https://www.linkedin.com/in/angelinamrodriguez" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><span class="t-prompt">$</span> echo "Designed & built by Angelina Rodriguez · Austin, TX"</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
