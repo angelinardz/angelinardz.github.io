@@ -226,24 +226,37 @@ const LANG_COLORS = {
   TypeScript: "#3178c6",
 };
 
-const SKIP_REPOS = new Set(["angelina-rodriguez"]); // profile README repo
+const SKIP_REPOS = new Set(["angelina-rodriguez", "angelinardz.github.io"]); // profile README + this portfolio's own repo
+
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[c]));
+}
 
 function projectCard(p) {
   const card = document.createElement("div");
   card.className = "project-card";
 
+  const title = escapeHtml(p.title);
+  const url = escapeHtml(p.url);
+  const demo = p.demo ? escapeHtml(p.demo) : null;
   const langColor = LANG_COLORS[p.language] || "#b9a3cc";
   const stats = [];
   if (typeof p.stars === "number" && p.stars > 0) {
     stats.push(`<span class="gh-stat">★ ${p.stars}</span>`);
   }
-  if (p.demo) {
+  if (demo) {
     stats.push(
-      `<a class="project-card__demo" href="${p.demo}" target="_blank" rel="noopener" aria-label="${p.title} — open live demo">live demo ↗</a>`
+      `<a class="project-card__demo" href="${demo}" target="_blank" rel="noopener" aria-label="${title} — open live demo">live demo ↗</a>`
     );
   }
   stats.push(
-    `<a class="gh-stat" href="${p.url}" target="_blank" rel="noopener" aria-label="${p.title} — view repository on GitHub">repo ↗</a>`
+    `<a class="gh-stat" href="${url}" target="_blank" rel="noopener" aria-label="${title} — view repository on GitHub">repo ↗</a>`
   );
 
   card.innerHTML = `
@@ -252,13 +265,13 @@ function projectCard(p) {
       <span class="project-card__folder">✦</span>
       <span class="project-card__links">${stats.join("")}</span>
     </div>
-    <h3>${p.title}</h3>
-    <p>${p.blurb}</p>
+    <h3>${title}</h3>
+    <p>${escapeHtml(p.blurb)}</p>
     <div class="project-card__meta">
-      <span class="project-card__tags">${(p.tags || []).map((t) => `<span>${t}</span>`).join("")}</span>
+      <span class="project-card__tags">${(p.tags || []).map((t) => `<span>${escapeHtml(t)}</span>`).join("")}</span>
       ${
         p.language
-          ? `<span class="project-card__lang"><span class="lang-dot" style="background:${langColor}"></span>${p.language}</span>`
+          ? `<span class="project-card__lang"><span class="lang-dot" style="background:${langColor}"></span>${escapeHtml(p.language)}</span>`
           : ""
       }
     </div>`;
