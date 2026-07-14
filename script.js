@@ -5,52 +5,6 @@
 const GITHUB_USER = "angelinardz";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ---------- typewriter (hero role) ---------- */
-const roles = [
-  "CS Student @ UT Austin",
-  "Web App Developer",
-  "ML & Data Explorer",
-  "Dell Scholar",
-  "Builder of things that matter",
-];
-
-(function typewriter() {
-  const el = document.getElementById("typewriter");
-  if (!el) return;
-  if (prefersReducedMotion) {
-    el.textContent = roles[0];
-    return;
-  }
-  let roleIdx = 0;
-  let charIdx = 0;
-  let deleting = false;
-
-  function tick() {
-    const current = roles[roleIdx];
-    if (!deleting) {
-      charIdx++;
-      el.textContent = current.slice(0, charIdx);
-      if (charIdx === current.length) {
-        deleting = true;
-        setTimeout(tick, 1900);
-        return;
-      }
-      setTimeout(tick, 55 + Math.random() * 45);
-    } else {
-      charIdx--;
-      el.textContent = current.slice(0, charIdx);
-      if (charIdx === 0) {
-        deleting = false;
-        roleIdx = (roleIdx + 1) % roles.length;
-        setTimeout(tick, 350);
-        return;
-      }
-      setTimeout(tick, 28);
-    }
-  }
-  tick();
-})();
-
 /* ---------- scroll reveal ---------- */
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -185,7 +139,7 @@ function projectCard(p) {
   card.innerHTML = `
     ${p.wip ? '<span class="project-card__wip">in progress</span>' : ""}
     <div class="project-card__top">
-      <span class="project-card__folder">▣</span>
+      <span class="project-card__folder">✦</span>
       <span class="project-card__links">${stats.join("")}</span>
     </div>
     <h3>${p.title}</h3>
