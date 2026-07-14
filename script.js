@@ -92,6 +92,7 @@ const PROJECT_DETAILS = {
     title: "listIt",
     blurb: "A lightweight list-making web app for grocery shopping.",
     tags: ["HTML", "CSS", "JavaScript"],
+    demo: "https://list-it-ten.vercel.app",
     priority: 4,
   },
 };
@@ -122,19 +123,22 @@ const LANG_COLORS = {
 const SKIP_REPOS = new Set(["angelina-rodriguez"]); // profile README repo
 
 function projectCard(p) {
-  const card = document.createElement("a");
+  const card = document.createElement("div");
   card.className = "project-card reveal";
-  card.href = p.url;
-  card.target = "_blank";
-  card.rel = "noopener";
-  card.setAttribute("aria-label", `${p.title} — view repository on GitHub`);
 
   const langColor = LANG_COLORS[p.language] || "#5b8cff";
   const stats = [];
   if (typeof p.stars === "number" && p.stars > 0) {
     stats.push(`<span class="gh-stat">★ ${p.stars}</span>`);
   }
-  stats.push(`<span class="gh-stat">↗</span>`);
+  if (p.demo) {
+    stats.push(
+      `<a class="project-card__demo" href="${p.demo}" target="_blank" rel="noopener" aria-label="${p.title} — open live demo">live demo ↗</a>`
+    );
+  }
+  stats.push(
+    `<a class="gh-stat" href="${p.url}" target="_blank" rel="noopener" aria-label="${p.title} — view repository on GitHub">repo ↗</a>`
+  );
 
   card.innerHTML = `
     ${p.wip ? '<span class="project-card__wip">in progress</span>' : ""}
@@ -152,6 +156,12 @@ function projectCard(p) {
           : ""
       }
     </div>`;
+
+  // Whole card opens the repo; inner links (demo/repo) take precedence.
+  card.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return;
+    window.open(p.url, "_blank", "noopener");
+  });
   return card;
 }
 
@@ -186,6 +196,7 @@ async function loadProjects() {
           blurb: details.blurb || r.description || "View this project on GitHub.",
           tags: details.tags || (r.language ? [r.language] : []),
           url: r.html_url,
+          demo: details.demo || r.homepage || null,
           language: r.language,
           stars: r.stargazers_count,
           priority: details.priority ?? 99,
