@@ -241,6 +241,7 @@ a { color: inherit; text-decoration: none; transition: color 0.2s; }
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 1.1rem 1.2rem 1rem;
+  cursor: pointer;
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s, border-color 0.3s;
 }
 .project-card:hover { transform: translateY(-3px); border-color: var(--lilac); box-shadow: 0 12px 24px rgba(61, 61, 61, 0.1); }
@@ -258,7 +259,22 @@ a { color: inherit; text-decoration: none; transition: color 0.2s; }
 .project-card__tags span { font-size: 0.65rem; color: var(--gray); border: 1px solid var(--line); border-radius: 999px; padding: 0.1rem 0.55rem; }
 .project-card__lang { display: flex; align-items: center; gap: 0.3rem; font-size: 0.68rem; color: var(--gray-light); }
 .lang-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
-.gh-stat { margin-left: 0.4rem; }
+.project-card__links { display: flex; align-items: center; gap: 0.45rem; }
+.gh-stat, .project-card__demo {
+  position: relative;
+  z-index: 1;
+  color: var(--gray-light);
+  text-decoration: none;
+}
+.gh-stat:hover { color: var(--lilac); }
+.project-card__demo {
+  color: var(--lilac);
+  border: 1px solid rgba(185, 163, 204, 0.4);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.65rem;
+}
+.project-card__demo:hover { background: var(--lilac-soft); }
 
 /* ---------- contact window ---------- */
 .contact__big { font-family: var(--head); font-weight: 400; font-size: 1.15rem; color: var(--ink-strong); line-height: 1.35; }

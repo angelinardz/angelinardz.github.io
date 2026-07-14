@@ -18,7 +18,6 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
@@ -285,6 +284,7 @@ a:hover { color: var(--lilac); }
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 1.5rem 1.5rem 1.3rem;
+  cursor: pointer;
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s, border-color 0.35s;
 }
 .project-card:hover {
@@ -343,7 +343,22 @@ a:hover { color: var(--lilac); }
   color: var(--gray-light);
 }
 .lang-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-.gh-stat { margin-left: 0.5rem; }
+.project-card__links { display: flex; align-items: center; gap: 0.5rem; }
+.gh-stat, .project-card__demo {
+  position: relative;
+  z-index: 1;
+  color: var(--gray-light);
+  text-decoration: none;
+}
+.gh-stat:hover { color: var(--lilac); }
+.project-card__demo {
+  color: var(--lilac);
+  border: 1px solid rgba(185, 163, 204, 0.4);
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.72rem;
+}
+.project-card__demo:hover { background: var(--lilac-soft); }
 
 /* ============ CONTACT ============ */
 .section--contact { text-align: center; padding-bottom: 5rem; }

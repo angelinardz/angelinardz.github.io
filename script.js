@@ -165,19 +165,6 @@ function projectCard(p) {
   return card;
 }
 
-function attachTilt(card) {
-  if (prefersReducedMotion || window.matchMedia("(hover: none)").matches) return;
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width - 0.5;
-    const py = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `perspective(800px) rotateY(${px * 7}deg) rotateX(${-py * 7}deg) translateY(-4px)`;
-  });
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-  });
-}
-
 async function loadProjects() {
   const grid = document.getElementById("projects-grid");
   let projects = [];
@@ -218,7 +205,6 @@ async function loadProjects() {
     const card = projectCard(p);
     card.style.transitionDelay = `${Math.min(i * 90, 450)}ms`;
     grid.appendChild(card);
-    attachTilt(card);
     revealObserver.observe(card);
   });
 }
