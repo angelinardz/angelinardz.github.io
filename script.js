@@ -97,20 +97,6 @@ const PROJECT_DETAILS = {
   },
 };
 
-// Shown even if there's no public repo yet.
-const EXTRA_PROJECTS = [
-  {
-    title: "HabitTracker",
-    blurb:
-      "React-based habit tracker featuring streak tracking, a built-in Pomodoro timer, and productivity graphs. Uses component-based state management with Supabase auth + storage, deployed on Vercel for secure multi-user, persistent data.",
-    tags: ["React", "Supabase", "Vercel"],
-    url: "https://github.com/" + GITHUB_USER,
-    wip: true,
-    language: "JavaScript",
-    priority: 3,
-  },
-];
-
 const LANG_COLORS = {
   Python: "#3572A5",
   JavaScript: "#f1e05a",
@@ -210,7 +196,6 @@ async function loadProjects() {
     }));
   }
 
-  projects = projects.concat(EXTRA_PROJECTS);
   projects.sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99));
 
   grid.innerHTML = "";
