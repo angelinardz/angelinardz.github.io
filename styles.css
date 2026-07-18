@@ -87,6 +87,8 @@ a:hover { color: var(--lilac); }
   color: var(--gray);
 }
 .nav__links a:hover { color: var(--ink-strong); }
+.nav__links a.nav__easter-egg { color: var(--lilac); }
+.nav__links a.nav__easter-egg:hover { color: var(--ink-strong); }
 
 /* ============ HERO ============ */
 .hero {
