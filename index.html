@@ -4,81 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Angelina Rodriguez — Portfolio</title>
-  <meta name="description" content="Portfolio of Angelina Rodriguez, Computer Science student at The University of Texas at Austin. Builder of web apps and ML tools." />
+  <meta name="description" content="Portfolio of Angelina Rodriguez, Computer Science student at The University of Texas at Austin. Interested in ML/AI and software engineering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
-    <a class="nav__logo" href="#top">AR</a>
+    <a class="nav__logo" href="#top">~/angelina</a>
     <nav class="nav__links" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a class="nav__easter-egg" href="os.html">AngelinaOS</a>
+      <a href="#about">about.md</a>
+      <a href="#experience">experience.log</a>
+      <a href="#projects">projects/</a>
+      <a href="#contact">contact.sh</a>
+      <a class="nav__hidden" href="os.html" title="psst — hidden">.angelinaos</a>
     </nav>
   </header>
 
   <main id="top">
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO / TERMINAL ============ -->
     <section class="hero">
-      <h1 class="hero__word reveal">Portfolio</h1>
-      <div class="hero__meta reveal">
-        <span class="hero__name">Angelina Rodriguez</span>
-        <span class="hero__role">CS Student · UT Austin</span>
+      <p class="hero__eyebrow reveal"><span class="dot"></span> angelina@portfolio — session active</p>
+
+      <div class="terminal reveal" id="terminal">
+        <div class="terminal__bar">
+          <div class="terminal__traffic"><span></span><span></span><span></span></div>
+          <span class="terminal__title">guest@angelina.dev — zsh</span>
+        </div>
+        <div class="terminal__body" id="terminalBody" tabindex="-1">
+          <div id="terminalOutput"></div>
+          <div class="terminal__prompt-row">
+            <span class="terminal__prompt">guest@angelina ~ %</span>
+            <div class="terminal__input-wrap">
+              <input
+                class="terminal__input"
+                id="terminalInput"
+                type="text"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+                aria-label="Terminal command input"
+                placeholder="type help ⏎"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hero__bottom reveal">
-        <p class="hero__bio">
-          Computer science student building web apps and
-          ML tools — designed with both engineering
-          and product thinking.
-        </p>
-        <span class="hero__year">2026</span>
+
+      <div class="hero__foot reveal">
+        <span>try <kbd>help</kbd>, <kbd>projects</kbd>, or <kbd>whoami</kbd> — real commands, not decoration</span>
+        <span>2026</span>
       </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
     <section class="section" id="about">
+      <p class="section__path reveal">~/angelina<span class="sep">/</span>about.md</p>
       <h2 class="section__title reveal">About me</h2>
-      <div class="about-cols">
-        <div class="about-text reveal">
-          <p>I'm a Computer Science student at <strong>The University of Texas at Austin</strong> (B.S. expected May 2029), a first-generation college student, and a <strong>Dell Scholar</strong> in the UT For Me program.</p>
-          <p>I've built ML-powered tools that summarize and analyze news sentiment, privacy-first web experiences, and data dashboards exploring mental health in the tech industry.</p>
-          <p>I'm interested in machine learning, product management, and software engineering.</p>
 
-          <div class="about-facts">
-            <div>
-              <h3>Skills</h3>
-              <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>HTML &amp; CSS</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Tools</h3>
-              <ul>
-                <li>Git &amp; GitHub</li>
-                <li>VS Code</li>
-                <li>Tableau</li>
-                <li>Flask</li>
-                <li>Linux</li>
-              </ul>
+      <div class="readme reveal">
+        <div class="readme__tab">README.md</div>
+        <div class="readme__body">
+          <div class="about-text">
+            <p>I'm a Computer Science student at <strong>The University of Texas at Austin</strong> (B.S. expected May 2029), a first-generation college student, and a <strong>Dell Scholar</strong> in the UT For Me program.</p>
+            <p>I've built ML-powered tools that summarize and analyze news sentiment, privacy-first web experiences, and data dashboards exploring mental health in the tech industry.</p>
+            <p>I'm interested in machine learning, product management, and software engineering.</p>
+
+            <div class="about-facts">
+              <div>
+                <h3>skills</h3>
+                <div class="pill-row">
+                  <span class="pill">Python</span>
+                  <span class="pill">Java</span>
+                  <span class="pill">JavaScript</span>
+                  <span class="pill">HTML &amp; CSS</span>
+                  <span class="pill">SQL</span>
+                </div>
+              </div>
+              <div>
+                <h3>tools</h3>
+                <div class="pill-row">
+                  <span class="pill">Git &amp; GitHub</span>
+                  <span class="pill">VS Code</span>
+                  <span class="pill">Tableau</span>
+                  <span class="pill">Flask</span>
+                  <span class="pill">Linux</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="about-visual reveal" aria-hidden="true">
-          <div class="about-card">
-            <span class="about-card__initials">AR</span>
-            <span class="about-card__caption">Austin, TX · English / Español</span>
+          <div class="about-visual" aria-hidden="true">
+            <div class="about-card">
+              <div class="about-card__row"><span>name</span><span>Angelina Rodriguez</span></div>
+              <div class="about-card__row"><span>role</span><span>CS Student · UT Austin</span></div>
+              <div class="about-card__row"><span>location</span><span>Austin, TX</span></div>
+              <div class="about-card__row"><span>lang</span><span>English / Español</span></div>
+              <div class="about-card__row"><span>status</span><span>open to internships</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -86,29 +112,40 @@
 
     <!-- ============ EXPERIENCE ============ -->
     <section class="section" id="experience">
+      <p class="section__path reveal">~/angelina<span class="sep">/</span>experience.log</p>
       <h2 class="section__title reveal">Experience</h2>
-      <div class="exp-list">
-        <article class="exp-item reveal">
-          <span class="exp-date">Jun – Jul 2026</span>
-          <div>
-            <h3>Residential Advisor <span class="exp-org">· UT CS Academies</span></h3>
+
+      <div class="gitlog reveal">
+        <article class="gitlog__entry">
+          <div class="gitlog__meta">
+            <span class="gitlog__hash">#a1c9e02</span>
+            <span class="gitlog__date">Jun – Jul 2026</span>
+          </div>
+          <div class="gitlog__msg">
+            <h3>Residential Advisor <span class="gitlog__org">· UT CS Academies</span></h3>
             <p>Mentored and supervised 10 high school students in a residential CS summer program, supporting academic growth and community building — and acting as the interface between participants and program leadership.</p>
           </div>
         </article>
-        <article class="exp-item reveal">
-          <span class="exp-date">Jun 2025</span>
-          <div>
-            <h3>Data Science Scholar <span class="exp-org">· Kode With Klossy</span></h3>
+        <article class="gitlog__entry">
+          <div class="gitlog__meta">
+            <span class="gitlog__hash">#7f3b810</span>
+            <span class="gitlog__date">Jun 2025</span>
+          </div>
+          <div class="gitlog__msg">
+            <h3>Data Science Scholar <span class="gitlog__org">· Kode With Klossy</span></h3>
             <p>Analyzed a real-world mental health dataset with a team and built an interactive Tableau dashboard exploring mental health trends across the tech industry.</p>
-            <div class="exp-tags"><span>Tableau</span><span>Data Analysis</span><span>Teamwork</span></div>
+            <div class="gitlog__tags"><span>Tableau</span><span>Data Analysis</span><span>Teamwork</span></div>
           </div>
         </article>
-        <article class="exp-item reveal">
-          <span class="exp-date">Jul 2024</span>
-          <div>
-            <h3>Machine Learning Certification <span class="exp-org">· Girls Who Code</span></h3>
+        <article class="gitlog__entry">
+          <div class="gitlog__meta">
+            <span class="gitlog__hash">#2d905c4</span>
+            <span class="gitlog__date">Jul 2024</span>
+          </div>
+          <div class="gitlog__msg">
+            <h3>Machine Learning Certification <span class="gitlog__org">· Girls Who Code</span></h3>
             <p>Applied SQL and Python to clean and analyze real-world datasets; built ML models and data visualizations as part of a structured AI curriculum.</p>
-            <div class="exp-tags"><span>Python</span><span>SQL</span><span>Machine Learning</span></div>
+            <div class="gitlog__tags"><span>Python</span><span>SQL</span><span>Machine Learning</span></div>
           </div>
         </article>
       </div>
@@ -116,24 +153,34 @@
 
     <!-- ============ PROJECTS ============ -->
     <section class="section" id="projects">
+      <p class="section__path reveal">~/angelina<span class="sep">/</span>projects/</p>
       <h2 class="section__title reveal">Projects</h2>
       <p class="section__sub reveal">
         <span class="live-dot"></span> Live from
         <a href="https://github.com/angelinardz" target="_blank" rel="noopener">github.com/angelinardz</a>
       </p>
-      <div class="projects" id="projects-grid">
-        <noscript>
-          <p>Enable JavaScript to see live GitHub project data, or visit
-            <a href="https://github.com/angelinardz">github.com/angelinardz</a>.</p>
-        </noscript>
+
+      <div class="explorer reveal">
+        <aside class="explorer__tree" id="projectsTree">
+          <div class="explorer__tree-label">explorer</div>
+          <noscript><p style="padding:0 0.6rem;font-size:0.8rem;">Enable JavaScript to browse projects, or visit
+            <a href="https://github.com/angelinardz">github.com/angelinardz</a>.</p></noscript>
+        </aside>
+        <div class="explorer__panel" id="projectsPanel">
+          <p class="panel-project__empty">Loading projects…</p>
+        </div>
       </div>
     </section>
 
     <!-- ============ CONTACT ============ -->
     <section class="section section--contact" id="contact">
+      <p class="section__path reveal">~/angelina<span class="sep">/</span>contact.sh</p>
       <h2 class="section__title reveal">Contact</h2>
       <p class="contact__big reveal">Open to internships, research,<br />and collaboration.</p>
-      <a class="btn magnetic reveal" href="mailto:angelinardz06@gmail.com">angelinardz06@gmail.com</a>
+
+      <div class="contact__code reveal"><span class="c"># reach out</span><br /><span class="k">echo</span> <span class="s">$EMAIL</span><br />angelinardz06@gmail.com</div><br />
+
+      <a class="btn reveal" href="mailto:angelinardz06@gmail.com">send an email →</a>
       <div class="contact__links reveal">
         <a href="https://github.com/angelinardz" target="_blank" rel="noopener">GitHub</a>
         <span>·</span>
@@ -143,8 +190,10 @@
   </main>
 
   <footer class="footer">
-    <p>Designed &amp; built by Angelina Rodriguez · Austin, TX · 2026</p>
+    <p>Designed &amp; built by Angelina Rodriguez · Austin, TX · 2026 · psst, try the <a href="os.html">hidden desktop</a></p>
   </footer>
+
+  <div class="toast" id="konamiToast"></div>
 
   <script src="script.js"></script>
 </body>
