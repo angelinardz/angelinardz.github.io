@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AngelinaOS — Angelina Rodriguez</title>
-  <meta name="description" content="Portfolio of Angelina Rodriguez, Computer Science student at The University of Texas at Austin, styled as a personal desktop OS." />
+  <meta name="description" content="Portfolio of Angelina Rodriguez, Computer Science student at The University of Texas at Austin, styled as a personal desktop OS — with a hidden terminal and a game." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="os-styles.css" />
 </head>
 <body class="os">
@@ -15,14 +15,14 @@
   <!-- ============ MENU BAR ============ -->
   <header class="menubar">
     <div class="menubar__left">
-      <a class="menubar__brand" href="index.html" title="Back to the regular site">✦ AngelinaOS</a>
+      <a class="menubar__brand" href="index.html" title="Back to the regular site">AngelinaOS</a>
       <nav class="menubar__menus" aria-hidden="true">
         <span>File</span><span>Edit</span><span>View</span><span>Window</span><span>Help</span>
       </nav>
     </div>
     <div class="menubar__right">
-      <span class="menubar__item">🔋</span>
-      <span class="menubar__item">📶</span>
+      <span class="menubar__item">batt 100%</span>
+      <span class="menubar__item">wifi</span>
       <span class="menubar__item" id="clock">—</span>
     </div>
   </header>
@@ -40,8 +40,14 @@
       <button class="desktop-icon" data-open="projects">
         <span class="desktop-icon__glyph">📁</span><span>Projects</span>
       </button>
+      <button class="desktop-icon" data-open="terminal">
+        <span class="desktop-icon__glyph">⌨️</span><span>Terminal</span>
+      </button>
       <button class="desktop-icon" data-open="contact">
         <span class="desktop-icon__glyph">✉️</span><span>Contact</span>
+      </button>
+      <button class="desktop-icon" data-open="snake">
+        <span class="desktop-icon__glyph">🐍</span><span>Snake</span>
       </button>
     </div>
 
@@ -53,12 +59,14 @@
           <button class="traffic traffic--min" data-action="minimize" aria-label="Minimize"></button>
           <button class="traffic traffic--max" data-action="maximize" aria-label="Maximize"></button>
         </div>
-        <h2 class="window__title">About Me.app</h2>
+        <h2 class="window__title">about.md</h2>
       </header>
       <div class="window__body">
         <div class="about-card">
-          <span class="about-card__initials">AR</span>
-          <span class="about-card__caption">Austin, TX · English / Español</span>
+          <div class="about-card__row"><span>name</span><span>Angelina Rodriguez</span></div>
+          <div class="about-card__row"><span>role</span><span>CS Student · UT Austin</span></div>
+          <div class="about-card__row"><span>location</span><span>Austin, TX</span></div>
+          <div class="about-card__row"><span>status</span><span>open to internships</span></div>
         </div>
         <p>I'm a Computer Science student at <strong>The University of Texas at Austin</strong> (B.S. expected May 2029), a first-generation college student, and a <strong>Dell Scholar</strong> in the UT For Me program.</p>
         <p>I've built ML-powered tools that summarize and analyze news sentiment, privacy-first web experiences, and data dashboards exploring mental health in the tech industry.</p>
@@ -66,24 +74,24 @@
 
         <div class="about-facts">
           <div>
-            <h3>Skills</h3>
-            <ul>
-              <li>Python</li>
-              <li>Java</li>
-              <li>JavaScript</li>
-              <li>HTML &amp; CSS</li>
-              <li>SQL</li>
-            </ul>
+            <h3>skills</h3>
+            <div class="pill-row">
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">HTML &amp; CSS</span>
+              <span class="pill">SQL</span>
+            </div>
           </div>
           <div>
-            <h3>Tools</h3>
-            <ul>
-              <li>Git &amp; GitHub</li>
-              <li>VS Code</li>
-              <li>Tableau</li>
-              <li>Flask</li>
-              <li>Linux</li>
-            </ul>
+            <h3>tools</h3>
+            <div class="pill-row">
+              <span class="pill">Git &amp; GitHub</span>
+              <span class="pill">VS Code</span>
+              <span class="pill">Tableau</span>
+              <span class="pill">Flask</span>
+              <span class="pill">Linux</span>
+            </div>
           </div>
         </div>
       </div>
@@ -97,31 +105,31 @@
           <button class="traffic traffic--min" data-action="minimize" aria-label="Minimize"></button>
           <button class="traffic traffic--max" data-action="maximize" aria-label="Maximize"></button>
         </div>
-        <h2 class="window__title">Experience.app</h2>
+        <h2 class="window__title">experience.log</h2>
       </header>
       <div class="window__body">
-        <div class="exp-list">
-          <article class="exp-item">
-            <span class="exp-date">Jun – Jul 2026</span>
-            <div>
-              <h3>Residential Advisor <span class="exp-org">· UT CS Academies</span></h3>
+        <div class="gitlog">
+          <article class="gitlog__entry">
+            <span class="gitlog__hash">#a1c9e02</span><span class="gitlog__date">Jun – Jul 2026</span>
+            <div class="gitlog__msg">
+              <h3>Residential Advisor <span class="gitlog__org">· UT CS Academies</span></h3>
               <p>Mentored and supervised 10 high school students in a residential CS summer program, supporting academic growth and community building — and acting as the interface between participants and program leadership.</p>
             </div>
           </article>
-          <article class="exp-item">
-            <span class="exp-date">Jun 2025</span>
-            <div>
-              <h3>Data Science Scholar <span class="exp-org">· Kode With Klossy</span></h3>
+          <article class="gitlog__entry">
+            <span class="gitlog__hash">#7f3b810</span><span class="gitlog__date">Jun 2025</span>
+            <div class="gitlog__msg">
+              <h3>Data Science Scholar <span class="gitlog__org">· Kode With Klossy</span></h3>
               <p>Analyzed a real-world mental health dataset with a team and built an interactive Tableau dashboard exploring mental health trends across the tech industry.</p>
-              <div class="exp-tags"><span>Tableau</span><span>Data Analysis</span><span>Teamwork</span></div>
+              <div class="gitlog__tags"><span>Tableau</span><span>Data Analysis</span><span>Teamwork</span></div>
             </div>
           </article>
-          <article class="exp-item">
-            <span class="exp-date">Jul 2024</span>
-            <div>
-              <h3>Machine Learning Certification <span class="exp-org">· Girls Who Code</span></h3>
+          <article class="gitlog__entry">
+            <span class="gitlog__hash">#2d905c4</span><span class="gitlog__date">Jul 2024</span>
+            <div class="gitlog__msg">
+              <h3>Machine Learning Certification <span class="gitlog__org">· Girls Who Code</span></h3>
               <p>Applied SQL and Python to clean and analyze real-world datasets; built ML models and data visualizations as part of a structured AI curriculum.</p>
-              <div class="exp-tags"><span>Python</span><span>SQL</span><span>Machine Learning</span></div>
+              <div class="gitlog__tags"><span>Python</span><span>SQL</span><span>Machine Learning</span></div>
             </div>
           </article>
         </div>
@@ -136,7 +144,7 @@
           <button class="traffic traffic--min" data-action="minimize" aria-label="Minimize"></button>
           <button class="traffic traffic--max" data-action="maximize" aria-label="Maximize"></button>
         </div>
-        <h2 class="window__title">Projects.app</h2>
+        <h2 class="window__title">projects/</h2>
       </header>
       <div class="window__body">
         <p class="section__sub">
@@ -152,15 +160,38 @@
       </div>
     </section>
 
-    <!-- ============ WINDOW: CONTACT ============ -->
-    <section class="window" data-window="contact" style="left:40%; top:34%; width:440px; height:320px;">
+    <!-- ============ WINDOW: TERMINAL ============ -->
+    <section class="window" data-window="terminal" style="left:10%; top:34%; width:520px; height:380px;">
       <header class="window__bar">
         <div class="window__traffic">
           <button class="traffic traffic--close" data-action="close" aria-label="Close"></button>
           <button class="traffic traffic--min" data-action="minimize" aria-label="Minimize"></button>
           <button class="traffic traffic--max" data-action="maximize" aria-label="Maximize"></button>
         </div>
-        <h2 class="window__title">Contact.app</h2>
+        <h2 class="window__title">Terminal</h2>
+      </header>
+      <div class="window__body" style="height:100%;">
+        <div class="os-terminal">
+          <div class="os-terminal__body" id="osTerminalBody" tabindex="-1">
+            <div id="osTerminalOutput"></div>
+            <div class="os-terminal__prompt-row">
+              <span class="os-terminal__prompt">guest@os ~ %</span>
+              <input class="os-terminal__input" id="osTerminalInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="OS terminal input" placeholder="try: play" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WINDOW: CONTACT ============ -->
+    <section class="window" data-window="contact" style="left:40%; top:40%; width:440px; height:320px;">
+      <header class="window__bar">
+        <div class="window__traffic">
+          <button class="traffic traffic--close" data-action="close" aria-label="Close"></button>
+          <button class="traffic traffic--min" data-action="minimize" aria-label="Minimize"></button>
+          <button class="traffic traffic--max" data-action="maximize" aria-label="Maximize"></button>
+        </div>
+        <h2 class="window__title">contact.sh</h2>
       </header>
       <div class="window__body window__body--center">
         <p class="contact__big">Open to internships, research,<br />and collaboration.</p>
@@ -173,6 +204,28 @@
       </div>
     </section>
 
+    <!-- ============ WINDOW: SNAKE ============ -->
+    <section class="window" data-window="snake" style="left:56%; top:12%; width:380px; height:460px;">
+      <header class="window__bar">
+        <div class="window__traffic">
+          <button class="traffic traffic--close" data-action="close" aria-label="Close"></button>
+          <button class="traffic traffic--min" data-action="minimize" aria-label="Minimize"></button>
+          <button class="traffic traffic--max" data-action="maximize" aria-label="Maximize"></button>
+        </div>
+        <h2 class="window__title">Snake</h2>
+      </header>
+      <div class="window__body" style="height:100%;">
+        <div class="snake-wrap">
+          <div class="snake-hud">
+            <span>score: <strong id="snakeScore">0</strong></span>
+            <span>best: <strong id="snakeBest">0</strong></span>
+          </div>
+          <canvas id="snakeCanvas" width="300" height="300"></canvas>
+          <p class="snake-hint" id="snakeHint">click the board, then use arrow keys or WASD</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ============ DOCK ============ -->
@@ -181,7 +234,10 @@
       <button class="dock__icon" data-open="about" title="About Me"><span>🧑‍💻</span><i class="dock__dot"></i></button>
       <button class="dock__icon" data-open="experience" title="Experience"><span>💼</span><i class="dock__dot"></i></button>
       <button class="dock__icon" data-open="projects" title="Projects"><span>📁</span><i class="dock__dot"></i></button>
+      <button class="dock__icon" data-open="terminal" title="Terminal"><span>⌨️</span><i class="dock__dot"></i></button>
       <button class="dock__icon" data-open="contact" title="Contact"><span>✉️</span><i class="dock__dot"></i></button>
+      <div class="dock__sep"></div>
+      <button class="dock__icon" data-open="snake" title="Snake"><span>🐍</span><i class="dock__dot"></i></button>
       <div class="dock__sep"></div>
       <a class="dock__icon" href="https://github.com/angelinardz" target="_blank" rel="noopener" title="GitHub"><span>🐙</span></a>
       <a class="dock__icon" href="https://www.linkedin.com/in/angelinamrodriguez" target="_blank" rel="noopener" title="LinkedIn"><span>🔗</span></a>
