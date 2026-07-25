@@ -112,7 +112,7 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
     contact() { printLine("opening contact.sh …", "out"); scrollToSection("contact"); },
     whoami() {
       printLine("Angelina Rodriguez — CS student @ UT Austin. Interested in ML/AI and software engineering.", "out");
-      printLine("Dell Scholar · first-gen college student · open to internships.", "muted");
+      printLine("UT For Me Dell Scholar · first-gen college student · open to internships.", "muted");
     },
     skills() {
       printLine("languages: Python, Java, JavaScript, HTML &amp; CSS, SQL", "out");
