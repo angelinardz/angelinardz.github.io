@@ -349,7 +349,7 @@ loadProjects();
     contact() { AngelinaOSWindows.openWindow("contact"); printLine("opened contact.sh", "out"); },
     play() { AngelinaOSWindows.openWindow("snake"); printLine("opened Snake — click the board to play", "ok"); },
     snake() { COMMANDS.play(); },
-    whoami() { printLine("Angelina Rodriguez — CS @ UT Austin. Dell Scholar. Open to internships.", "out"); },
+    whoami() { printLine("Angelina Rodriguez — CS @ UT Austin. UT For Me -Powered by Dell Scholar. Open to internships.", "out"); },
     ls() { printLine("about.md  experience.log  projects/  contact.sh  Snake.app", "out"); },
     home() { printLine("returning to the regular site …", "out"); setTimeout(() => { window.location.href = "index.html"; }, 500); },
     clear() { output.innerHTML = ""; },
