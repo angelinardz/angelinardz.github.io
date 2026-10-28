@@ -111,7 +111,7 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
     projects() { printLine("opening projects/ …", "out"); scrollToSection("projects"); },
     contact() { printLine("opening contact.sh …", "out"); scrollToSection("contact"); },
     whoami() {
-      printLine("Angelina Rodriguez — CS student @ UT Austin. Interested in ML/AI and software engineering.", "out");
+      printLine("Angelina Rodriguez — CS student @ UT Austin. Interested in cybersecurity, product management, and software engineering.", "out");
       printLine("UT For Me Dell Scholar · first-gen college student · open to internships.", "muted");
     },
     skills() {
@@ -201,7 +201,7 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
     const now = new Date();
     printLine(`Last login: ${now.toDateString()} on ttys001`, "muted");
     printLine("whoami", "cmd");
-    printLine("Angelina Rodriguez — CS @ UT Austin · interested in ML/AI &amp; software engineering", "ok");
+    printLine("Angelina Rodriguez — CS @ UT Austin · interested in cybersecurity, product &amp; software engineering", "ok");
     printLine("type <span class=\"terminal__line--accent\">help</span> to see what this terminal can do.", "muted");
   }
   boot();
